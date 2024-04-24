@@ -7,4 +7,6 @@ return [
     'incorrect_information' => 'Incorrect information',
     'change_password_success' => 'Changed password successfully',
     'logout_success' => 'Logged out successfully',
+    'update_success' => 'Updated successfully',
+    'delete_success' => 'Deleted successfully',
 ];

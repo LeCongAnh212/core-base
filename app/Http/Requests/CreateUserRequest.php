@@ -24,7 +24,9 @@ class CreateUserRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'email' => 'required|regex:/(.+)@(.+)\.(.+)/i|unique:users',
+            'email' => [
+                'required|regex:/(.+)@(.+)\.(.+)/i|unique:users',
+            ],
             'password' => 'required|min:8|regex:/^[a-zA-Z]+[a-zA-Z0-9\-]*$/u',
         ];
     }
