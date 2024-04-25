@@ -6,7 +6,7 @@ abstract class BaseService
 {
     protected $data;
 
-    public function setParam($data = null)
+    public function setParams($data = null)
     {
         $this->data = $data;
 

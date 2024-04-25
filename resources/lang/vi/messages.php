@@ -7,4 +7,7 @@ return [
     'incorrect_information' => 'Thông tin không hợp lệ',
     'change_password_success' => 'Đổi mật khẩu thành công',
     'logout_success' => 'Đăng xuất thành công',
+    'logout_fail' => 'Đăng xuất thất bại',
+    'update_success' => 'Cập nhật thành công',
+    'delete_success' => 'Xoá thành công',
 ];

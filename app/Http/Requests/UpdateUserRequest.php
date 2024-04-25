@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
-class CreateUserRequest extends FormRequest
+class UpdateUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,25 +23,13 @@ class CreateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string',
+            'password' => 'required|string|min:8|regex:/^[a-zA-Z]+[a-zA-Z0-9\-]*$/u',
             'email' => [
                 'required',
                 'regex:/^[a-zA-Z]+[a-zA-Z0-9\-]*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,}$/ui',
-                'unique:users'
+                Rule::unique('users')->ignore($this->user()->id, 'id')
             ],
-            'password' => 'required|min:8|regex:/^[a-zA-Z]+[a-zA-Z0-9\-]*$/u',
-        ];
-    }
-
-    /**
-     * notification messages
-     * @return array
-     */
-    public function messages(): array
-    {
-        return [
-            'email.regex' => 'Email format is incorrect',
-            'password.regex' => 'Passwords cannot contain spaces and should start with at least 1 letter',
+            'name' => 'required|string',
         ];
     }
 }
