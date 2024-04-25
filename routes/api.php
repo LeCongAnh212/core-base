@@ -13,4 +13,5 @@ Route::group(['middleware' => 'auth:sanctum', 'prefix' => 'user'], function () {
     Route::get('/get-all-user', [UserController::class, 'getAllUser']);
     Route::get('/info', [UserController::class, 'info']);
     Route::get('find-user/{id}', [UserController::class, 'findUser']);
+    // Route::get('logout', [UserController::class, 'logout']);
 });

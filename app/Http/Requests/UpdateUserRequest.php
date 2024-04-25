@@ -26,7 +26,7 @@ class UpdateUserRequest extends FormRequest
             'password' => 'required|string|min:8|regex:/^[a-zA-Z]+[a-zA-Z0-9\-]*$/u',
             'email' => [
                 'required',
-                'regex:/(.+)@(.+)\.(.+)/i',
+                'regex:/^[a-zA-Z]+[a-zA-Z0-9\-]*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,}$/ui',
                 Rule::unique('users')->ignore($this->user()->id, 'id')
             ],
             'name' => 'required|string',
