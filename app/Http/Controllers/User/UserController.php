@@ -168,6 +168,10 @@ class UserController extends Controller
     //     }
     // }
 
+    /**
+     * send error forbidden
+     * @return mixed|\Illuminate\Http\JsonResponse
+     */
     public function errorForbidden()
     {
         return $this->responseErrors(__('messages.error_forbidden'), Response::HTTP_FORBIDDEN);

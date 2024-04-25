@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware\Store;
 
+use App\Enums\UserRole;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +21,7 @@ class StoreMiddleware
             return redirect()->route('login');
         }
 
-        if (in_array(Auth::user()->role, ['admin', 'store'])) {
+        if (in_array(Auth::user()->role, [UserRole::ADMIN, UserRole::STORE])) {
             return $next($request);
         }
 
