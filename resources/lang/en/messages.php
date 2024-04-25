@@ -10,4 +10,5 @@ return [
     'logout_fail' => 'Failed to log out',
     'update_success' => 'Updated successfully',
     'delete_success' => 'Deleted successfully',
+    'error_forbidden' => 'Forbidden',
 ];

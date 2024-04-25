@@ -167,4 +167,20 @@ class UserController extends Controller
     //         return $this->responseErrors(__('messages.error_server'));
     //     }
     // }
+
+    public function errorForbidden()
+    {
+        return $this->responseErrors(__('messages.error_forbidden'), Response::HTTP_FORBIDDEN);
+    }
+
+    /**
+     * switch to login
+     * @return mixed|\Illuminate\Http\JsonResponse
+     */
+    public function loginView()
+    {
+        return $this->responseSuccess([
+            'message' => 'switch to login',
+        ]);
+    }
 }
