@@ -13,9 +13,6 @@ class StoreController extends Controller
      */
     public function check()
     {
-        return response()->json([
-            'status'    => 200,
-            'message'   => 'store',
-        ]);
+        return $this->responseSuccess(['message' => 'store']);
     }
 }

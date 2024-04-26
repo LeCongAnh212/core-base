@@ -13,10 +13,7 @@ class AdminController extends Controller
      */
     public function check()
     {
-        return response()->json([
-            'status'    => 200,
-            'message'   => 'bạn có quyền admin',
-        ]);
+        return $this->responseSuccess(['message' => 'admin']);
     }
 
 }

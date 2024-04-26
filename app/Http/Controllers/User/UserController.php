@@ -151,23 +151,6 @@ class UserController extends Controller
         return $this->responseErrors(__('messages.error_server'));
     }
 
-    // /**
-    //  * logout user
-    //  * @return mixed|\Illuminate\Http\JsonResponse
-    //  */
-    // public function logout()
-    // {
-    //     try {
-    //         Auth::logout();
-
-    //         return $this->responseSuccess([
-    //             'message' => __('messages.logout_success'),
-    //         ]);
-    //     } catch (\Throwable $th) {
-    //         return $this->responseErrors(__('messages.error_server'));
-    //     }
-    // }
-
     /**
      * send error forbidden
      * @return mixed|\Illuminate\Http\JsonResponse

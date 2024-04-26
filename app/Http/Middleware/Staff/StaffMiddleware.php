@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 class StaffMiddleware
 {
     /**
-     * Handle an incoming request.
+     * handle user has role staff.
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */

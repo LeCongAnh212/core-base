@@ -13,9 +13,6 @@ class StaffController extends Controller
      */
     public function check()
     {
-        return response()->json([
-            'status'    => 200,
-            'message'   => 'staff',
-        ]);
+        return $this->responseSuccess(['message' => 'staff']);
     }
 }

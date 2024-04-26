@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 class StoreMiddleware
 {
     /**
-     * Handle an incoming request.
+     * handle user has role store.
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
